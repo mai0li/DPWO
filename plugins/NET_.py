@@ -17,7 +17,9 @@ brute = False
 
 def is_vuln(ssid,mac) :
 	regex = re.compile("^NET_.(g|G)")
-	if regex.search(ssid) is not None:
+	if ssid == None:
+		return False
+	elif regex.search(ssid) is not None:
 		return True
 	else : 
 		return False	

@@ -132,6 +132,8 @@ class NETOwner():
         else:
             connected = False
             for wifi in tqdm(wifi_available):
+                if wifi["ssid"] == None:
+                    continue
                 tqdm.write("WI-FI: " + wifi["ssid"])
                 tqdm.write("Password: " + wifi["wifi_password"])
 
